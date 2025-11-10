@@ -1,0 +1,143 @@
+:root {
+  font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+  color: #0b192f;
+  background-color: #f0f6ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 2rem 1rem 3rem;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+.game-shell {
+  width: min(720px, 100%);
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 15px 45px rgba(10, 48, 88, 0.12);
+  padding: 2rem;
+}
+
+.game-header h1 {
+  margin: 0 0 0.25rem;
+  font-size: 1.75rem;
+}
+
+.status-panel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 1rem;
+  margin: 1.5rem 0;
+}
+
+.status-panel div {
+  background: #f5f8ff;
+  border-radius: 12px;
+  padding: 0.85rem 1rem;
+  text-align: center;
+}
+
+.status-panel .label {
+  display: block;
+  font-size: 0.85rem;
+  color: #5f6c86;
+}
+
+.toy-stage {
+  margin: 0 auto 1.5rem;
+  display: flex;
+  justify-content: center;
+}
+
+#croc-canvas {
+  width: min(640px, 100%);
+  height: auto;
+  aspect-ratio: 3 / 2;
+  display: block;
+  border-radius: 24px;
+  background: radial-gradient(circle at 20% 20%, #1f8f46, #0f4c24 80%);
+  box-shadow: 0 35px 70px rgba(4, 28, 12, 0.35);
+  border: 6px solid #082412;
+}
+
+@keyframes shake {
+  0% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-4px);
+  }
+  50% {
+    transform: translateX(4px);
+  }
+  75% {
+    transform: translateX(-4px);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+
+.message {
+  margin: 0 0 1rem;
+  font-weight: 600;
+}
+
+.controls {
+  display: flex;
+  justify-content: center;
+  gap: 0.75rem;
+  margin: 0.5rem 0 1.5rem;
+}
+
+.controls button {
+  border: none;
+  border-radius: 999px;
+  padding: 0.85rem 1.8rem;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 10px 22px rgba(18, 52, 99, 0.18);
+}
+
+.controls .primary {
+  background: linear-gradient(135deg, #5b8cff, #3462ff);
+  color: white;
+}
+
+.controls .reset {
+  background: #d8e1ff;
+  color: #1e2c5d;
+}
+
+.controls button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.tips {
+  margin-top: 2rem;
+}
+
+.tips ul {
+  padding-left: 1.1rem;
+  color: #38455f;
+}

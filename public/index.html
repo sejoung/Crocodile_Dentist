@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crocodile Dentist Mini</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <main class="game-shell">
+      <header class="game-header">
+        <h1>간단한 악어 이빨 게임</h1>
+        <p>안전한 이빨을 눌러 포인트를 모으고, 위험한 이빨을 누르면 악어가 물어요!</p>
+      </header>
+
+      <section class="status-panel">
+        <div>
+          <span class="label">라운드</span>
+          <strong data-round>0</strong>
+        </div>
+        <div>
+          <span class="label">안전 클릭</span>
+          <strong data-safe-count>0</strong>
+        </div>
+        <div>
+          <span class="label">최고 기록</span>
+          <strong data-best>0</strong>
+        </div>
+      </section>
+
+      <section class="toy-stage">
+        <h2 class="sr-only">WebGL 악어 장난감</h2>
+        <canvas
+          id="croc-canvas"
+          width="720"
+          height="480"
+          role="img"
+          aria-label="악어 입"
+        >
+          WebGL을 지원하는 브라우저에서만 게임을 즐길 수 있습니다.
+        </canvas>
+      </section>
+
+      <p class="message" data-message>라운드를 시작해 악어 입을 열어보세요.</p>
+
+      <div class="controls">
+        <button type="button" class="primary" data-action="start">라운드 시작</button>
+        <button type="button" class="reset" data-action="reset">모두 초기화</button>
+      </div>
+
+      <section class="tips">
+        <h2>게임 방법</h2>
+        <ul>
+          <li>라운드 시작 버튼을 누르면 악어가 한 개의 위험한 이빨을 정해요.</li>
+          <li>안전한 이빨을 누를 때마다 점수가 올라가고, 버튼은 잠겨요.</li>
+          <li>위험한 이빨을 누르면 즉시 패배! 새 라운드를 시작해 보세요.</li>
+        </ul>
+      </section>
+    </main>
+
+    <script type="module" src="js/game.js"></script>
+  </body>
+</html>
